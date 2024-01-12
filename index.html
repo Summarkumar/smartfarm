@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--=============== BOXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Smart Farm</title>
+  </head>
+
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">Smart Farm</a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">
+                <i class="bx bx-home-alt nav__icon"></i>
+                <span class="nav__name">Home</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#Controls" class="nav__link">
+                <i class="bx bx-book-alt nav__icon"></i>
+                <span class="nav__name">Controls</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#Parameters" class="nav__link">
+                <i class="bx bx-briefcase-alt nav__icon"></i>
+                <span class="nav__name">Parameters</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#About" class="nav__link">
+                <i class="bx bx-user nav__icon"></i>
+                <span class="nav__name">About</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#Login" class="nav__link">
+                <i class="bx bx-message-square-detail nav__icon"></i>
+                <script type="module">
+                  const user = await getUserInfo();
+                </script>
+                <span class="nav__name">Login</span>
+                <script type="module">
+                  const user = await getUserInfo();
+                </script>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <img src="assets/img/perfil.png" alt="" class="nav__img" />
+      </nav>
+    </header>
+
+    <main>
+      <!--=============== HOME ===============-->
+      <section class="container section section__height" id="home">
+        <div class="home-content">
+          <h2 class="section__title">Welcome to Smart Farm</h2>
+          <p class="section__subtitle">Your Partner in Modern Agriculture</p>
+
+          <div class="video-container">
+            <!-- Add your video embed code or link here -->
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/TOfe91lt_og?si=v61CK-GCWRXyHAJt"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div class="project-info">
+            <h3 class="section__subtitle">About the Project</h3>
+            <p>
+              Welcome to the future of farming – the Smart Farm powered by IoT.
+              This innovative agricultural system represents a revolution in the
+              way we cultivate crops and manage livestock, offering a holistic
+              approach to agriculture that integrates technology and data-driven
+              insights.
+            </p>
+            <p><b>Key features</b></p>
+            <p>
+              Real-time Monitoring: Continuous monitoring of environmental
+              conditions such as temperature, humidity, soil moisture, and light
+              levels. Automated Irrigation: Precise control of irrigation
+              systems based on soil conditions, weather forecasts, and crop
+              needs. Crop Health Management: Early detection of diseases, pests,
+              and nutrient deficiencies through sensors and cameras.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Control Section -->
+      <section class="container section" id="Controls">
+        <h2 class="section__title">Controls</h2>
+        <div class="control-container">
+          <!-- Water Pump Control -->
+          <div class="control">
+            <div class="control-icon">
+              <i class="bx bx-water"></i>
+            </div>
+            <h3 class="control-title">Water Pump</h3>
+            <label class="switch" id="toggleButton4">
+              <input type="checkbox" class="control-switch" />
+              <span class="slider round"></span>
+            </label>
+            <div class="info-popup">
+              <p>Click to toggle the water pump.</p>
+            </div>
+          </div>
+
+          <!-- Electric Fence Control -->
+          <div class="control">
+            <div class="control-icon">
+              <i class="bx bx-shield"></i>
+            </div>
+            <h3 class="control-title">Electric Fence</h3>
+            <label class="switch" id="toggleButton1">
+              <input type="checkbox" class="control-switch" />
+              <span class="slider round"></span>
+            </label>
+            <div class="info-popup">
+              <p>Click to toggle the electric fence.</p>
+            </div>
+          </div>
+
+          <!-- Fertilizers Control -->
+          <div class="control">
+            <div class="control-icon">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1669/1669912.png"
+                alt="Fertilizer Image"
+              />
+            </div>
+            <h3 class="control-title">Fertilizers</h3>
+            <label class="switch" id="toggleButton2">
+              <input type="checkbox" class="control-switch" />
+              <span class="slider round"></span>
+            </label>
+            <div class="info-popup">
+              <p>Click to toggle fertilizers.</p>
+            </div>
+          </div>
+
+          <!-- Lights Control -->
+          <div class="control">
+            <div class="control-icon">
+              <i class="bx bx-sun"></i>
+            </div>
+            <h3 class="control-title">Lights</h3>
+            <label class="switch" id="toggleButton3">
+              <input type="checkbox" class="control-switch" />
+              <span class="slider round"></span>
+            </label>
+            <div class="info-popup">
+              <p>Click to toggle lights.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Parameters Section -->
+      <section class="container section" id="Parameters">
+        <h2 class="section__title">Parameters</h2>
+        <div class="parameters-container">
+          <!-- Water Level Parameter -->
+          <div class="parameter">
+            <div class="parameter-icon">
+              <i class="bx bx-droplet"></i>
+            </div>
+            <h3 class="parameter-title">Water Level</h3>
+            <div class="parameter-value" id="dataDisplay4"></div>
+            <div class="info-popup">Water level information goes here.</div>
+          </div>
+
+          <!-- Humidity Parameter -->
+          <div class="parameter">
+            <div class="parameter-icon">
+              <i class="bx bx-cloud"></i>
+            </div>
+            <h3 class="parameter-title">Humidity %</h3>
+            <div class="parameter-value" id="dataDisplay1"></div>
+            <div class="info-popup">Humidity information goes here.</div>
+          </div>
+
+          <!-- Temperature Parameter -->
+          <div class="parameter">
+            <div class="parameter-icon">
+              <i class="bx bxs-sun"></i>
+            </div>
+            <h3 class="parameter-title">Temp Degree Celcius</h3>
+            <div class="parameter-value" id="dataDisplay3"></div>
+            <div class="info-popup">Temperature information goes here.</div>
+          </div>
+
+          <!-- Moisture Parameter -->
+          <div class="parameter">
+            <div class="parameter-icon">
+              <i class="bx bx-water"></i>
+            </div>
+            <h3 class="parameter-title">Moisture VWC</h3>
+            <div class="parameter-value" id="dataDisplay2"></div>
+            <div class="info-popup">Moisture information goes here.</div>
+          </div>
+          <!-- Add more parameters as needed -->
+        </div>
+      </section>
+
+      <!--=============== About ===============-->
+      <!-- About Section -->
+      <section class="container section section__height" id="About">
+        <h2 class="section__title">About Us</h2>
+        <div class="about-container">
+          <!-- Member 1 -->
+          <div class="about-member">
+            <img src="Member1.jpeg" alt="Mohit Gajbhiye" class="member-img" />
+            <h3 class="member-name">Mohit Gajbhiye</h3>
+            <p class="member-description">
+              Hardware connection of iot with the website
+            </p>
+          </div>
+
+          <!-- Member 2 -->
+          <div class="about-member">
+            <img src="Member2.jpeg" alt="Summar Kumar" class="member-img" />
+            <h3 class="member-name">Summar kumar</h3>
+            <p class="member-description">Frontend + firebase connection</p>
+          </div>
+      </section>
+
+      <!--=============== Login ===============-->
+      <section class="container section section__height" id="About">
+        <h2 class="section__title">About</h2>
+      </section>
+      <section class="container section section__height" id="Login">
+        <div class="login">
+          <div class="login__content">
+            <div class="login__img">
+              <img src="img-login.svg" alt="" />
+            </div>
+
+            <div class="login__forms">
+              <form action="" class="login__registre" id="login-in">
+                <h1 class="login__title">Sign In</h1>
+
+                <div class="login__box">
+                  <i class="bx bx-user login__icon"></i>
+                  <input
+                    type="text"
+                    placeholder="Username"
+                    class="login__input"
+                  />
+                </div>
+
+                <div class="login__box">
+                  <i class="bx bx-lock-alt login__icon"></i>
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    class="login__input"
+                  />
+                </div>
+
+                <a href="#" class="login__forgot">Forgot password?</a>
+
+                <a href="#" class="login__button">Sign In</a>
+
+                <div>
+                  <span class="login__account">Don't have an Account ?</span>
+                  <span class="login__signin" id="sign-up">Sign Up</span>
+                </div>
+              </form>
+
+              <form action="" class="login__create none" id="login-up">
+                <h1 class="login__title">Create Account</h1>
+
+                <div class="login__box">
+                  <i class="bx bx-user login__icon"></i>
+                  <input
+                    type="text"
+                    placeholder="Username"
+                    class="login__input"
+                  />
+                </div>
+
+                <div class="login__box">
+                  <i class="bx bx-at login__icon"></i>
+                  <input type="text" placeholder="Email" class="login__input" />
+                </div>
+
+                <div class="login__box">
+                  <i class="bx bx-lock-alt login__icon"></i>
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    class="login__input"
+                  />
+                </div>
+
+                <a href="#" class="login__button">Sign Up</a>
+
+                <div>
+                  <span class="login__account">Already have an Account ?</span>
+                  <span class="login__signup" id="sign-in">Sign In</span>
+                </div>
+
+                <div class="login__social">
+                  <a href="#" class="login__social-icon"
+                    ><i class="bx bxl-facebook"></i
+                  ></a>
+                  <a href="#" class="login__social-icon"
+                    ><i class="bx bxl-twitter"></i
+                  ></a>
+                  <a href="#" class="login__social-icon"
+                    ><i class="bx bxl-google"></i
+                  ></a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="script.js"></script>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
